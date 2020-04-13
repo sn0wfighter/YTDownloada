@@ -18,10 +18,10 @@ public:
 
     QString getUrl() const;
 
-    QString getAudioOnly() const;
+    bool getAudioOnly() const;
+    QString getAudioOnlyFlag() const;
 
     void setUrl(const QString &value);
-
     void setAudioOnly(bool value);
 
     QStringList getAvailableFormats() const;

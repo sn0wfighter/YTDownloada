@@ -18,14 +18,20 @@ QString DownloadEntry::getUrl() const
     return url;
 }
 
-QString DownloadEntry::getAudioOnly() const
+bool DownloadEntry::getAudioOnly() const
 {
-    if (audioOnly)
+    return audioOnly;
+}
+
+
+QString DownloadEntry::getAudioOnlyFlag() const
+{
+    if (getAudioOnly())
     {
-        return "-x --audio-format mp3";
+        return QString("-x --audio-format mp3");
     }
     else {
-        return "";
+        return QString("");
     }
 
 }
@@ -58,7 +64,7 @@ QString DownloadEntry::getCommandline() const
 void DownloadEntry::buildCommandline()
 {
     // %1 = youtube-dl, %2 = formatcode, %3 = audio-only flag, $4 = URL
-    QString temp = QString("%1 -f %2 %3 %4").arg("youtube-dl.exe").arg(getFormatcode()).arg(getAudioOnly())\
+    QString temp = QString("%1 -f %2 %3 %4").arg("youtube-dl.exe").arg(getFormatcode()).arg(getAudioOnlyFlag())\
             .arg(getUrl());
     qDebug() << "set commandline to " << temp;
 
