@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QCoreApplication>
 #include <QFileDialog>
+#include <QMessageBox>
 
 
 const QString ffmpeg_dir = QCoreApplication::applicationDirPath().append(QDir::separator()).append("ffmpeg.exe");
@@ -18,6 +19,11 @@ MainWindow::MainWindow(QWidget *parent)
 
     if (!QFileInfo::exists(ffmpeg_dir)) {
         qDebug() << "ffmpeg not found, for mp3 support please download";
+        QMessageBox err;
+        err.setIcon(QMessageBox::Critical);
+        err.setText(QString("ffmpeg not found, please download for mp3 support!"));
+        err.setWindowTitle("ffmpeg not found");
+        err.exec();
         ui->AudioCheckbox->setEnabled(false);
     }
 
