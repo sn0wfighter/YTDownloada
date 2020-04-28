@@ -1,4 +1,5 @@
 #include "downloadentry.h"
+#include "mainwindow.h"
 
 //DownloadEntry::DownloadEntry()
 //{
@@ -9,6 +10,8 @@ DownloadEntry::DownloadEntry(QString &url, bool audioonly)
 {
     this->setUrl(url);
     this->setAudioOnly(audioonly);
+
+    //if (){};
 
     incrementCounter();
 }
@@ -68,7 +71,7 @@ void DownloadEntry::buildCommandline()
             .arg(getUrl());
     qDebug() << "set commandline to " << temp;
 
-    commandline = temp;
+    this->commandline = temp;
 
 
 }
@@ -81,6 +84,16 @@ void DownloadEntry::setFormatcode(const QString &value)
 QString DownloadEntry::getFormatcode() const
 {
     return formatcode;
+}
+
+QDir DownloadEntry::getDownloadlocation() const
+{
+    return downloadlocation;
+}
+
+void DownloadEntry::setDownloadlocation(const QDir &value)
+{
+    downloadlocation = value;
 }
 
 void DownloadEntry::incrementCounter()

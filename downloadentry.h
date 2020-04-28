@@ -1,9 +1,11 @@
 #ifndef DOWNLOADENTRY_H
 #define DOWNLOADENTRY_H
 
+#include "mainwindow.h"
 #include <QString>
 #include <QStringList>
 #include <QDebug>
+#include <QDir>
 
 
 class DownloadEntry
@@ -34,12 +36,16 @@ public:
 
     QString getFormatcode() const;
 
+    QDir getDownloadlocation() const;
+    void setDownloadlocation(const QDir &value);
+
 private:
     QString url;
     bool audioOnly;
     QStringList availableFormats;
     QString formatcode;
     QString commandline;
+    QDir downloadlocation;
 
 
 };

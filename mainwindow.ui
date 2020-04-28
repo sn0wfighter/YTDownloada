@@ -12,8 +12,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>634</width>
-    <height>363</height>
+    <width>700</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -24,14 +24,14 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>634</width>
-    <height>363</height>
+    <width>700</width>
+    <height>400</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>634</width>
-    <height>363</height>
+    <width>700</width>
+    <height>400</height>
    </size>
   </property>
   <property name="contextMenuPolicy">
@@ -45,18 +45,155 @@
     <normaloff>:/res/icon/icon.jpg</normaloff>:/res/icon/icon.jpg</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>0</y>
-      <width>611</width>
-      <height>274</height>
+      <x>610</x>
+      <y>180</y>
+      <width>92</width>
+      <height>64</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="leftMargin">
+      <number>6</number>
+     </property>
+     <property name="topMargin">
+      <number>6</number>
+     </property>
+     <property name="rightMargin">
+      <number>6</number>
+     </property>
+     <property name="bottomMargin">
+      <number>6</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>23</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>80</width>
+         <height>23</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Import</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>23</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>80</width>
+         <height>23</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Export</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QTableWidget" name="downloadList">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>136</y>
+      <width>589</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1200</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <property name="tabKeyNavigation">
+     <bool>false</bool>
+    </property>
+    <property name="showDropIndicator" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="dragDropOverwriteMode">
+     <bool>false</bool>
+    </property>
+    <column>
+     <property name="text">
+      <string>Format Code</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>URL</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>output directory</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>audio only?</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>13</y>
+      <width>591</width>
+      <height>119</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="leftMargin">
+        <number>6</number>
+       </property>
        <property name="topMargin">
         <number>6</number>
        </property>
@@ -78,12 +215,12 @@
           <string>URL:</string>
          </property>
          <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          <set>Qt::AlignJustify|Qt::AlignVCenter</set>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit">
+        <widget class="QLineEdit" name="URLlineEdit">
          <property name="sizePolicy">
           <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
            <horstretch>0</horstretch>
@@ -98,7 +235,7 @@
        <item>
         <widget class="QPushButton" name="checkButton">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -106,13 +243,13 @@
          <property name="minimumSize">
           <size>
            <width>80</width>
-           <height>0</height>
+           <height>23</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
            <width>80</width>
-           <height>16777215</height>
+           <height>23</height>
           </size>
          </property>
          <property name="text">
@@ -123,9 +260,100 @@
       </layout>
      </item>
      <item>
+      <layout class="QHBoxLayout" name="form4">
+       <property name="leftMargin">
+        <number>6</number>
+       </property>
+       <property name="topMargin">
+        <number>6</number>
+       </property>
+       <property name="rightMargin">
+        <number>6</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="outputdirLabel">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Output directory:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="outputLineEdit">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="frame">
+          <bool>true</bool>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="placeholderText">
+          <string notr="true"/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="browseButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>80</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>browse...</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <property name="leftMargin">
-        <number>0</number>
+        <number>6</number>
        </property>
        <property name="topMargin">
         <number>6</number>
@@ -160,7 +388,7 @@
           <string>available formats:</string>
          </property>
          <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          <set>Qt::AlignJustify|Qt::AlignVCenter</set>
          </property>
         </widget>
        </item>
@@ -171,6 +399,28 @@
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QComboBox::AdjustToContents</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="AudioCheckbox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Audio only (mp3)?</string>
          </property>
         </widget>
        </item>
@@ -184,14 +434,14 @@
          </property>
          <property name="minimumSize">
           <size>
-           <width>0</width>
-           <height>0</height>
+           <width>80</width>
+           <height>23</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
            <width>80</width>
-           <height>16777215</height>
+           <height>23</height>
           </size>
          </property>
          <property name="text">
@@ -201,85 +451,18 @@
        </item>
       </layout>
      </item>
-     <item>
-      <widget class="QTableWidget" name="downloadList">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="editTriggers">
-        <set>QAbstractItemView::NoEditTriggers</set>
-       </property>
-       <property name="tabKeyNavigation">
-        <bool>false</bool>
-       </property>
-       <property name="showDropIndicator" stdset="0">
-        <bool>false</bool>
-       </property>
-       <property name="dragDropOverwriteMode">
-        <bool>false</bool>
-       </property>
-       <property name="sortingEnabled">
-        <bool>true</bool>
-       </property>
-       <property name="wordWrap">
-        <bool>false</bool>
-       </property>
-       <attribute name="horizontalHeaderCascadingSectionResizes">
-        <bool>true</bool>
-       </attribute>
-       <attribute name="horizontalHeaderMinimumSectionSize">
-        <number>50</number>
-       </attribute>
-       <attribute name="horizontalHeaderDefaultSectionSize">
-        <number>205</number>
-       </attribute>
-       <attribute name="horizontalHeaderHighlightSections">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
-        <bool>false</bool>
-       </attribute>
-       <column>
-        <property name="text">
-         <string>Format code</string>
-        </property>
-        <property name="textAlignment">
-         <set>AlignCenter</set>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Format</string>
-        </property>
-        <property name="textAlignment">
-         <set>AlignCenter</set>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>URL</string>
-        </property>
-        <property name="textAlignment">
-         <set>AlignCenter</set>
-        </property>
-       </column>
-      </widget>
-     </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>270</y>
-      <width>611</width>
-      <height>34</height>
+      <x>13</x>
+      <y>304</y>
+      <width>591</width>
+      <height>76</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="form4">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
      <property name="leftMargin">
       <number>6</number>
      </property>
@@ -293,113 +476,46 @@
       <number>6</number>
      </property>
      <item>
-      <widget class="QLabel" name="outputdirLabel">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <property name="topMargin">
+        <number>6</number>
        </property>
-       <property name="minimumSize">
-        <size>
-         <width>100</width>
-         <height>0</height>
-        </size>
+       <property name="rightMargin">
+        <number>6</number>
        </property>
-       <property name="maximumSize">
-        <size>
-         <width>150</width>
-         <height>16777215</height>
-        </size>
+       <property name="bottomMargin">
+        <number>6</number>
        </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="text">
-        <string>Output directory:</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="outputLineEdit">
-       <property name="frame">
-        <bool>true</bool>
-       </property>
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-       <property name="placeholderText">
-        <string notr="true"/>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="browseButton">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>80</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>browse...</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>310</y>
-      <width>601</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
-     <property name="sizeConstraint">
-      <enum>QLayout::SetDefaultConstraint</enum>
-     </property>
-     <property name="leftMargin">
-      <number>6</number>
-     </property>
-     <property name="topMargin">
-      <number>6</number>
-     </property>
-     <property name="rightMargin">
-      <number>6</number>
-     </property>
-     <property name="bottomMargin">
-      <number>6</number>
-     </property>
-     <item>
-      <widget class="QCheckBox" name="AudioCheckbox">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="contextMenuPolicy">
-        <enum>Qt::NoContextMenu</enum>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="text">
-        <string>Audio only (mp3)?</string>
-       </property>
-      </widget>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Delete</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="UpdateButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Update youtube-dl</string>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
      <item>
       <widget class="QPushButton" name="DownloadButton">
@@ -419,22 +535,6 @@
         <string>Download</string>
        </property>
        <property name="autoDefault">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="UpdateButton">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Update youtube-dl</string>
-       </property>
-       <property name="checkable">
         <bool>false</bool>
        </property>
       </widget>

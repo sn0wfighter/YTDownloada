@@ -23,6 +23,10 @@ private slots:
 
     void on_browseButton_clicked();
 
+    void on_pushButton_clicked();
+
+    void on_checkButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
