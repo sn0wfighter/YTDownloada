@@ -126,9 +126,9 @@ void MainWindow::on_checkButton_clicked()
 
                 ui->formatsComboBox->setStyleSheet(QString("QComboBox QAbstractItemView { min-width: %1;}").arg(QString::number(max_width)));
 
-                //qDebug() << entries;
-                //QMessageBox er; er.exec();
+
             } else {
+                QMessageBox::critical(nullptr, QString("Unsupported URL"), "This URL is not supported by youtube-dl!\nFor supported pages visit http://ytdl-org.github.io/youtube-dl/supportedsites.html");
                 qDebug() << "unsupported URL, returncode != 0";
             }
 
