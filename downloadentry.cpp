@@ -76,6 +76,11 @@ void DownloadEntry::buildCommandline()
 
 }
 
+QString DownloadEntry::extractFormatcode(const QString &value)
+{
+    return value.split(" ", QString::SkipEmptyParts, Qt::CaseSensitive).at(0);
+}
+
 void DownloadEntry::setFormatcode(const QString &value)
 {
     formatcode = value;

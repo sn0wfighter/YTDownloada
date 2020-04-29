@@ -32,6 +32,7 @@ public:
     QString getCommandline() const;
     void buildCommandline();
 
+    QString extractFormatcode(const QString &value);
     void setFormatcode(const QString &value);
 
     QString getFormatcode() const;
