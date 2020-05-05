@@ -42,10 +42,10 @@
   </property>
   <property name="windowIcon">
    <iconset resource="Res.qrc">
-    <normaloff>:/res/icon/icon.jpg</normaloff>:/res/icon/icon.jpg</iconset>
+    <normaloff>:/root/res/icon/icon.ico</normaloff>:/root/res/icon/icon.ico</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>610</x>
@@ -179,7 +179,7 @@
      </property>
     </column>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>16</x>
@@ -453,7 +453,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>13</x>

@@ -2,7 +2,7 @@
 #include "ui_mainwindow.h"
 #include <qprocess.h>
 #include "mydialog.h"
-#include "downloadentry.h"
+//#include "downloadentry.h"
 #include <qdir.h>
 #include <QDebug>
 #include <QCoreApplication>
